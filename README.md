@@ -13,6 +13,49 @@
 
 ---
 
+## 先说明：你现在这种情况（GitHub 有仓库，本地没有文件）怎么处理
+
+> 你说“连接的是 GitHub 仓库文件，本地文件没有”，这是最常见场景。先把代码下载到你电脑，再运行。
+
+### 方案 1（推荐）：用 Git 克隆到本地
+
+1. 打开 GitHub 仓库网页。
+2. 点击绿色按钮 **Code**。
+3. 复制 HTTPS 地址（示例：`https://github.com/你的用户名/你的仓库.git`）。
+4. 在 Windows 打开 **PowerShell**。
+5. 执行：
+
+```powershell
+git clone 你的仓库地址
+```
+
+例如：
+
+```powershell
+git clone https://github.com/yourname/team-app.git
+```
+
+6. 克隆完成后进入目录：
+
+```powershell
+cd 你的仓库名
+```
+
+7. 执行 `dir`，如果能看到 `app.py`、`README.md`、`templates`、`static`，说明本地文件已经有了。
+
+### 方案 2（不装 Git 也能用）：下载 ZIP
+
+1. 打开 GitHub 仓库网页。
+2. 点击绿色按钮 **Code**。
+3. 点击 **Download ZIP**。
+4. 下载后右键 ZIP，选择 **解压到当前文件夹** 或 **Extract All...**。
+5. 打开解压后的文件夹，确认有 `app.py`。
+6. 在该文件夹空白处右键，选择 **在终端中打开**。
+
+### 拿到本地文件后，再继续下面“Windows 点击教程”
+
+---
+
 ## Windows 电脑：从“点击”开始（超详细）
 
 > 你是 Windows 用户的话，优先看这一段。不会命令行也没关系，按步骤点就行。
