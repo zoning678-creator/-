@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>团建平台 - 商家与社群</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <header>
+    <h1>团建活动平台</h1>
+    <p>支持商家入驻、用户社群管理，以及管理后台数据分析。</p>
+    <a class="btn" href="/admin">进入管理后台</a>
+  </header>
+
+  <main class="grid">
+    <section>
+      <h2>商家入驻</h2>
+      <form id="merchantForm">
+        <input name="name" placeholder="商家名称" required />
+        <input name="category" placeholder="商家类别（餐饮/拓展等）" required />
+        <input name="contact" placeholder="联系人" required />
+        <input name="city" placeholder="城市" required />
+        <button type="submit">提交入驻</button>
+      </form>
+      <ul id="merchantList"></ul>
+    </section>
+
+    <section>
+      <h2>用户社群管理</h2>
+      <form id="communityForm">
+        <input name="name" placeholder="社群名称" required />
+        <input name="owner" placeholder="创建者用户名" required />
+        <input name="description" placeholder="社群简介" required />
+        <button type="submit">创建社群</button>
+      </form>
+      <div class="inline-form">
+        <input id="joinCommunityId" type="number" placeholder="社群ID" />
+        <input id="joinUsername" placeholder="用户名" />
+        <button id="joinBtn">加入社群</button>
+      </div>
+      <div class="inline-form">
+        <input id="postCommunityId" type="number" placeholder="社群ID" />
+        <input id="postAuthor" placeholder="发帖用户" />
+        <input id="postContent" placeholder="帖子内容" />
+        <button id="postBtn">发布帖子</button>
+      </div>
+      <ul id="communityList"></ul>
+    </section>
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
